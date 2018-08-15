@@ -22,7 +22,16 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+fieldset {
+  display: block;
+  background-color: #5C636F;
+  color: #A0A6BA;
+  margin: 0em;
+  height: 215px;
+  width: 480px;
+}
+
+label {
+  display: block;
+  margin: 0.5em;
 }
