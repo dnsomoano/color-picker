@@ -15,7 +15,7 @@ class ColorPicker extends Component {
     this.setState({
       hue: raiseHue
     });
-    console.log(this.state.hue);
+    // console.log(this.state.hue);
   };
 
   slideSaturation = event => {
@@ -23,21 +23,29 @@ class ColorPicker extends Component {
     this.setState({
       saturation: raiseSaturation
     });
-    console.log(this.state.saturation);
+    // console.log(this.state.saturation);
   };
 
-  slideSaturation = event => {
+  slideLightness = event => {
     const raiseLightness = event.target.value;
     this.setState({
       lightness: raiseLightness
     });
-    console.log(this.state.lightness);
+    // console.log(this.state.lightness);
   };
 
   render() {
     return (
       <div>
         <section>
+          <section
+            className="box"
+            style={{
+              backgroundColor: `hsl(${this.state.hue}, ${
+                this.state.saturation
+              }%, ${this.state.lightness}%)`
+            }}
+          />
           <fieldset>
             <label for="hue">Hue</label>
             <input placeholder={this.state.hue} />
@@ -73,17 +81,7 @@ class ColorPicker extends Component {
               value={this.state.lightness}
             />
           </fieldset>
-          <section
-            className="dom"
-            style={{
-              backgroundColor: `hsl(${this.state.hue},${
-                this.state.saturation
-              }%,${this.state.lightness}%)`
-            }}
-          />
         </section>
-        <p>
-        </p>
       </div>
     );
   }

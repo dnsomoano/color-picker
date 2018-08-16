@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  color:white;
 }
 
 .App-logo {
@@ -31,24 +32,13 @@ fieldset {
   margin: 0em;
   height: 215px;
   width: 480px;
-  
-}
-
-/* #hue {
   padding: 1em;
 }
 
-#saturation {
-  padding: 1em;
-}
-
-#lightness {
-  padding: 1em;
-} */
-
-.dom {
+.box {
   display: flex;
   justify-content: center;
+  padding: 10em;
 }
 
 legend {
