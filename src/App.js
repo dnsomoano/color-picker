@@ -7,6 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">Choose Your Color</header>
+        <img src={"/images/color-box.png"} />
         <ColorPicker />
       </div>
     );

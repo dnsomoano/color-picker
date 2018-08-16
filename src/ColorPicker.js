@@ -4,48 +4,86 @@ class ColorPicker extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hue: 0.0,
-      saturation: 0.0,
-      lightness: 0.0
+      hue: 0,
+      saturation: 0,
+      lightness: 0
     };
   }
 
-  slideBar = () => {
-    console.log(this);
+  slideHue = event => {
+    const raiseHue = event.target.value;
     this.setState({
-      hue: 0.0,
-      saturation: 0.0,
-      lightness: 0.0
+      hue: raiseHue
     });
+    console.log(this.state.hue);
   };
+
+  slideSaturation = event => {
+    const raiseSaturation = event.target.value;
+    this.setState({
+      saturation: raiseSaturation
+    });
+    console.log(this.state.saturation);
+  };
+
+  slideSaturation = event => {
+    const raiseLightness = event.target.value;
+    this.setState({
+      lightness: raiseLightness
+    });
+    console.log(this.state.lightness);
+  };
+
   render() {
     return (
       <div>
         <section>
           <fieldset>
-            <legend>Color</legend>
             <label for="hue">Hue</label>
-            <input type="range" id="hue" name="hue" min="0" max="100" />
+            <input placeholder={this.state.hue} />
+            <input
+              type="range"
+              id="hue"
+              name="hue"
+              min="1"
+              max="360"
+              onInput={this.slideHue}
+              value={this.state.hue}
+            />
             <label for="saturation">Saturation</label>
+            <input placeholder={this.state.saturation} />
             <input
               type="range"
               id="saturation"
               name="saturation"
-              min="0"
+              min="1"
               max="100"
-              step="2"
+              onInput={this.slideSaturation}
+              value={this.state.saturation}
             />
             <label for="lightness">Lightness</label>
+            <input placeholder={this.state.lightness} />
             <input
               type="range"
               id="lightness"
               name="lightness"
-              min="0"
+              min="1"
               max="100"
-              step="3"
+              onInput={this.slideLightness}
+              value={this.state.lightness}
             />
           </fieldset>
+          <section
+            className="dom"
+            style={{
+              backgroundColor: `hsl(${this.state.hue},${
+                this.state.saturation
+              }%,${this.state.lightness}%)`
+            }}
+          />
         </section>
+        <p>
+        </p>
       </div>
     );
   }
