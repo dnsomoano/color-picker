@@ -102,12 +102,14 @@ class ColorPicker extends Component {
             />
           </fieldset>
         </section>
-        <p>
-        hsla({this.state.hue}, {
-                this.state.saturation
-              }%, {this.state.lightness}%,{this.state.alpha})`
-            }}
-          </p>
+        {/* if ({this.state.alpha}!= 1) { */}
+        <p id="display-hsla">
+         hsla({this.state.hue}, {this.state.saturation}
+          %, {this.state.lightness}
+          %,
+          {this.state.alpha})
+        </p>
+        {/* } */}
       </div>
     );
   }
