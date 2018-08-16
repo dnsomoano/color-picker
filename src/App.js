@@ -7,7 +7,6 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">Choose Your Color</header>
-        <section className="dom">SEE?</section>
         <ColorPicker />
       </div>
     );

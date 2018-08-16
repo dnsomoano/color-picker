@@ -6,7 +6,8 @@ class ColorPicker extends Component {
     this.state = {
       hue: 0,
       saturation: 0,
-      lightness: 0
+      lightness: 0,
+      alpha: 1
     };
   }
 
@@ -34,16 +35,24 @@ class ColorPicker extends Component {
     // console.log(this.state.lightness);
   };
 
+  slideAlpha = event => {
+    const raiseAlpha = event.target.value;
+    this.setState({
+      alpha: raiseAlpha / 100
+    });
+    // console.log(this.state.lightness);
+  };
+
   render() {
     return (
       <div>
-        <section>
+        <section className="main-container">
           <section
             className="box"
             style={{
-              backgroundColor: `hsl(${this.state.hue}, ${
+              backgroundColor: `hsla(${this.state.hue}, ${
                 this.state.saturation
-              }%, ${this.state.lightness}%)`
+              }%, ${this.state.lightness}%,${this.state.alpha})`
             }}
           />
           <fieldset>
@@ -80,8 +89,25 @@ class ColorPicker extends Component {
               onInput={this.slideLightness}
               value={this.state.lightness}
             />
+            <label for="alpha">Alpha</label>
+            <input placeholder={this.state.alpha} />
+            <input
+              type="range"
+              id="alpha"
+              name="alpha"
+              min="0.00"
+              max="1.00"
+              onInput={this.slideAlpha}
+              value={this.state.alpha}
+            />
           </fieldset>
         </section>
+        <p>
+        hsla({this.state.hue}, {
+                this.state.saturation
+              }%, {this.state.lightness}%,{this.state.alpha})`
+            }}
+          </p>
       </div>
     );
   }
