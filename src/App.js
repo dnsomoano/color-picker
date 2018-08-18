@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">Choose Your Color</header>
+        <header className="App-header App-title">Choose Your Color</header>
         <ColorPicker />
       </div>
     );

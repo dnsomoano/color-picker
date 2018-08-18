@@ -1,12 +1,11 @@
 .App {
   text-align: center;
-  color:black;
 }
 
-.App-logo {
+/* .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
-}
+} */
 
 .App-header {
   background-color: #222;
@@ -15,35 +14,44 @@
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 2em;
+  color:white;
 }
 
 .App-intro {
   font-size: large;
 }
 
-fieldset {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #5C636F ;
-  color: #A0A6BA;
-  margin: 0em;
-  height: 215px;
-  width: 480px;
-  padding: 1em;
-  padding-bottom: 7em;
-}
 
 .main-container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .box {
   display: flex;
   justify-content: center;
-  padding: 0 17em 10em 0;
+  border-radius: 0.3em;
+  height: 5em;
+  width: 5em;
+  margin: 5em 1em 1em 1em;
+  padding: 1em;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #5C636F ;
+  border-radius: 0.2em;
+  color: #A0A6BA;
+  margin: 1em;
+  height: 200px;
+  width: 250px;
+  padding: 2em;
+  padding-bottom: 3em;
 }
 
 legend {
@@ -51,12 +59,20 @@ legend {
   flex-direction: column;
 }
 
-#display-hsla {
-  display: flex;
-  justify-content: center;
-}
-
 label {
   display: block;
   margin: 0.5em;
+  text-align: left;
+}
+
+.placeholder-style {
+  margin-bottom: 0.5em;
+  padding: 0em;
+  width: 2.5em;
+}
+
+/*  */
+#display-hsla {
+  display: flex;
+  justify-content: center;
 }

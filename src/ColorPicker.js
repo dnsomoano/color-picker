@@ -5,8 +5,8 @@ class ColorPicker extends Component {
     super(props);
     this.state = {
       hue: 0,
-      saturation: 0,
-      lightness: 0,
+      saturation: 50,
+      lightness: 50,
       alpha: 1
     };
   }
@@ -57,7 +57,7 @@ class ColorPicker extends Component {
           />
           <fieldset>
             <label for="hue">Hue</label>
-            <input placeholder={this.state.hue} />
+            <input className="placeholder-style" placeholder={this.state.hue} />
             <input
               type="range"
               id="hue"
@@ -68,7 +68,7 @@ class ColorPicker extends Component {
               value={this.state.hue}
             />
             <label for="saturation">Saturation</label>
-            <input placeholder={this.state.saturation} />
+            <input className="placeholder-style" placeholder={this.state.saturation} />
             <input
               type="range"
               id="saturation"
@@ -79,7 +79,7 @@ class ColorPicker extends Component {
               value={this.state.saturation}
             />
             <label for="lightness">Lightness</label>
-            <input placeholder={this.state.lightness} />
+            <input className="placeholder-style" placeholder={this.state.lightness} />
             <input
               type="range"
               id="lightness"
@@ -90,7 +90,7 @@ class ColorPicker extends Component {
               value={this.state.lightness}
             />
             <label for="alpha">Alpha</label>
-            <input placeholder={this.state.alpha} />
+            <input className="placeholder-style" placeholder={this.state.alpha} />
             <input
               type="range"
               id="alpha"
