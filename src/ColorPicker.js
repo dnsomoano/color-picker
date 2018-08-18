@@ -55,56 +55,71 @@ class ColorPicker extends Component {
               }%, ${this.state.lightness}%,${this.state.alpha})`
             }}
           />
-          <fieldset>
-            <label for="hue">Hue</label>
-            <input className="placeholder-style" placeholder={this.state.hue} />
-            <input
-              type="range"
-              id="hue"
-              name="hue"
-              min="1"
-              max="360"
-              onInput={this.slideHue}
-              value={this.state.hue}
-            />
-            <label for="saturation">Saturation</label>
-            <input className="placeholder-style" placeholder={this.state.saturation} />
-            <input
-              type="range"
-              id="saturation"
-              name="saturation"
-              min="1"
-              max="100"
-              onInput={this.slideSaturation}
-              value={this.state.saturation}
-            />
-            <label for="lightness">Lightness</label>
-            <input className="placeholder-style" placeholder={this.state.lightness} />
-            <input
-              type="range"
-              id="lightness"
-              name="lightness"
-              min="1"
-              max="100"
-              onInput={this.slideLightness}
-              value={this.state.lightness}
-            />
-            <label for="alpha">Alpha</label>
-            <input className="placeholder-style" placeholder={this.state.alpha} />
-            <input
-              type="range"
-              id="alpha"
-              name="alpha"
-              min="0.00"
-              max="1.00"
-              onInput={this.slideAlpha}
-              value={this.state.alpha}
-            />
-          </fieldset>
+          <section className="fieldset-container">
+            <fieldset>
+              <label for="hue">Hue</label>
+              <input
+                className="placeholder-style"
+                placeholder={this.state.hue}
+              />
+              <input
+                type="range"
+                id="hue"
+                name="hue"
+                min="1"
+                max="360"
+                onInput={this.slideHue}
+                value={this.state.hue}
+              />
+              <label for="saturation">Saturation</label>
+              <input
+                className="placeholder-style"
+                placeholder={this.state.saturation}
+              />
+              <input
+                type="range"
+                id="saturation"
+                name="saturation"
+                min="1"
+                max="100"
+                onInput={this.slideSaturation}
+                value={this.state.saturation}
+              />
+              <label for="lightness">Lightness</label>
+              <input
+                className="placeholder-style"
+                placeholder={this.state.lightness}
+              />
+              <input
+                type="range"
+                id="lightness"
+                name="lightness"
+                min="1"
+                max="100"
+                onInput={this.slideLightness}
+                value={this.state.lightness}
+              />
+              <label for="alpha">Alpha</label>
+              <input
+                className="placeholder-style"
+                placeholder={this.state.alpha}
+              />
+              <input
+                type="range"
+                id="alpha"
+                name="alpha"
+                min="0.00"
+                max="1.00"
+                onInput={this.slideAlpha}
+                value={this.state.alpha}
+              />
+            </fieldset>
+          </section>
         </section>
         {/* if ({this.state.alpha}!= 1) { */}
         <p id="display-hsla">
-         hsla({this.state.hue}, {this.state.saturation}
+          hsla(
+          {this.state.hue}, {this.state.saturation}
           %, {this.state.lightness}
           %,
           {this.state.alpha})

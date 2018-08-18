@@ -39,6 +39,11 @@
   padding: 1em;
 }
 
+.fieldset-container {
+  display: flex;
+  flex-direction: column;
+}
+
 fieldset {
   display: flex;
   flex-direction: column;
@@ -51,7 +56,7 @@ fieldset {
   height: 200px;
   width: 250px;
   padding: 2em;
-  padding-bottom: 3em;
+  padding-bottom: 8em;
 }
 
 legend {
